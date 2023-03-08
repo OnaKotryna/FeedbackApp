@@ -11,7 +11,7 @@ import AboutPage from "./pages/AboutPage";
 import { FeedbackProvider } from "./context/FeedbackContext";
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
-  const deleteFeeback = (id) => {
+  const deleteFeedback = (id) => {
     if (window.confirm("Are you sure?")) {
       setFeedback(feedback.filter((item) => item.id !== id));
     }
@@ -32,11 +32,8 @@ function App() {
               element={
                 <>
                   <FeedbackForm handleAdd={addFeedback} />
-                  <FeedbackStats feedback={feedback} />
-                  <FeedbackList
-                    feedback={feedback}
-                    handleDelete={deleteFeeback}
-                  />
+                  <FeedbackStats />
+                  <FeedbackList handleDelete={deleteFeedback} />
                 </>
               }
             />
