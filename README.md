@@ -1,3 +1,3 @@
 # Feedback App
 
-Feedback App to get to know React Framework
+Feedback App to get to know React
